@@ -1,0 +1,82 @@
+@media (max-width: 768px) {
+    body {
+        min-height: 100svh;
+        min-height: 100dvh;
+        padding: 16px;
+    }
+
+    .clock {
+        width: min(calc(100vw - 32px), 420px);
+        height: min(calc(100vw - 32px), 420px);
+    }
+
+    .clock .number {
+        font-size: clamp(1.1rem, 3.6vw, 1.55rem);
+        padding: clamp(10px, 3vw, 14px);
+    }
+
+    .clock::after {
+        width: 8px;
+        height: 8px;
+    }
+
+    .clock .hand.seconds {
+        width: 2px;
+    }
+
+    .clock .hand.minutes {
+        width: 5px;
+    }
+
+    .clock .hand.hours {
+        width: 7px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .clock {
+        width: min(calc(100vw - 24px), 330px);
+        height: min(calc(100vw - 24px), 330px);
+        border-width: 1.5px;
+    }
+
+    .clock .number {
+        font-size: clamp(0.95rem, 4.2vw, 1.2rem);
+        padding: clamp(8px, 2.5vw, 11px);
+    }
+
+    .clock::after {
+        width: 7px;
+        height: 7px;
+    }
+
+    .clock .hand.seconds {
+        height: 41%;
+    }
+
+    .clock .hand.minutes {
+        width: 4px;
+        height: 35%;
+    }
+
+    .clock .hand.hours {
+        width: 6px;
+        height: 24%;
+    }
+}
+
+@media (max-width: 360px) {
+    .clock {
+        width: calc(100vw - 24px);
+        height: calc(100vw - 24px);
+    }
+
+    .clock .number {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
